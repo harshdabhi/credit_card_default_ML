@@ -35,8 +35,9 @@ def prediction():
             PAY_AMT4 =request.form['pay_amt4']
             PAY_AMT5 =request.form['pay_amt5']
             PAY_AMT6 =request.form['pay_amt6']
+            LIMIT_AMT=request.form['limit_amount']
 
-            val=np.array((SEX,EDUCATION,MARRIAGE,AGE,PAY_1,PAY_2,PAY_3,PAY_4,PAY_5,PAY_6,BILL_AMT1,BILL_AMT2,BILL_AMT3,BILL_AMT4,BILL_AMT5,BILL_AMT6,PAY_AMT1,PAY_AMT2,PAY_AMT3,PAY_AMT4,PAY_AMT5,PAY_AMT6)).reshape(1,-1)
+            val=np.array((LIMIT_AMT,SEX,EDUCATION,MARRIAGE,AGE,PAY_1,PAY_2,PAY_3,PAY_4,PAY_5,PAY_6,BILL_AMT1,BILL_AMT2,BILL_AMT3,BILL_AMT4,BILL_AMT5,BILL_AMT6,PAY_AMT1,PAY_AMT2,PAY_AMT3,PAY_AMT4,PAY_AMT5,PAY_AMT6)).reshape(1,-1)
             sc=pickle.load(open('Models/StandardScalar.pkl','rb'))
             val=sc.transform(val)
 
