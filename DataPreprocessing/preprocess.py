@@ -14,7 +14,7 @@ class preprocess:
         c=df[df.isnull()].count()
 
         for i in range(len(c.keys())):
-            if c[i]==0:
+            if c[i]!=0:
                 df[c.keys()[i]].fillna(df[c.keys()[i]].mean())
                 logging.info(f'Data has been imputed for column {c.keys()[i]}')
                 

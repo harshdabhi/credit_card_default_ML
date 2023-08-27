@@ -1,7 +1,7 @@
 from sklearn.model_selection import train_test_split,GridSearchCV
 from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans # to select model for best categorisation
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestClassifier # best than decision tree to avoid overfitting of model
 from sklearn.linear_model import LogisticRegression #since we have binary classification
 import pandas as pd
 import os

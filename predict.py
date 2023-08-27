@@ -3,6 +3,7 @@ from DataPreprocessing.preprocess import preprocess
 from ModelTraining.ModelTrain import model_training
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression 
+import json
 #since we have binary classification
 
 
@@ -36,11 +37,20 @@ class predict:
                 dict1[count1]=f'logisticR_cluster{count1}.pkl'
             elif i in m2:
                 dict1[count1]=f'randomF_cluster{count1}.pkl'
+
+
+        json_data = json.dumps(dict1)
+
+        with open("data.json", "w") as json_file:
+            json_file.write(json_data)
+
+        
         return dict1
 
 
 if __name__=="__main__":
+
     f=predict()
     c=f.prediction()
-    print(c)
+    
 
