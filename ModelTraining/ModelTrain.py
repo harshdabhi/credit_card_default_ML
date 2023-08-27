@@ -34,8 +34,8 @@ class model_training:
         sc=StandardScaler()  # save sc for transforming the user inputs
         os.makedirs('Models',exist_ok=True)
 
-        pickle.dump(sc,file=open(f'StandardScalar.pkl','wb'))
-        shutil.move(f'StandardScalar.pkl','Models')
+        # pickle.dump(sc,file=open(f'StandardScalar.pkl','wb'))
+        # shutil.move(f'StandardScalar.pkl','Models')
 
         dfscaled=pd.DataFrame(sc.fit_transform(X),columns=X.columns)
         X=dfscaled

@@ -1,4 +1,5 @@
 from logger import logging
+from sklearn.preprocessing import StandardScaler
 
 class preprocess:
     def __init__(self) -> None:
@@ -64,5 +65,13 @@ class preprocess:
 
         logging.info('dataimputation has been completed')
         return dataframe
+    
+    def scalar_standard(self,dataframe):
+        X=dataframe.drop('default.payment.next.month',axis=1)
+        X=X.drop('ID',axis=1)
+
+        sc=StandardScaler()
+        sc.fit_transform(X)
+        return sc
 
     
