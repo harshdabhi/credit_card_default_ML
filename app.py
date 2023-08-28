@@ -59,10 +59,10 @@ def prediction():
             prediction_value=pred.predict(val)
 
             if prediction_value==0:
-                content={'display':'Less possibility of default'}
+                content='Less possibility of default'
             
             if prediction_value==1:
-                content={'display':'case of credit card payment default is likely'}
+                content='case of credit card payment default is likely'
 
 
 
