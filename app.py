@@ -61,7 +61,7 @@ def prediction():
             if prediction_value==0:
                 content='credit card default is not possible'
             
-            if prediction_value==1:
+            elif prediction_value==1:
                 content='credit card payment default is possible'
 
 
