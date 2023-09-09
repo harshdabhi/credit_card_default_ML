@@ -9,6 +9,7 @@ debugpy
 decorator 
 dnspython==2.4.2
 executing 
+flask
 fonttools==4.42.1
 importlib-metadata 
 ipykernel 
