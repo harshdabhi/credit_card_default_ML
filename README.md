@@ -12,3 +12,6 @@
   ## To train model type cmf: python predict.py
 
 # project demonstration 
+
+https://github.com/harshdabhi/credit_card_default_ML/assets/109458952/28f0a9c5-9cbf-4e77-8f26-4b7dcb2ce065
+
